@@ -1,20 +1,35 @@
 <template>
   <v-app>
-    <div>
-      <v-app-bar>
 
-        <v-toolbar-title>{{ $static.metadata.siteName }}</v-toolbar-title>
-        <v-spacer />
+    <v-app-bar app elevate-on-scroll color="white">
+      <v-toolbar-title>
+        <img :src="require('../assets/vino.png')" height="30">
+      </v-toolbar-title>
 
-        <nav class="nav">
+      <v-spacer />
+
+      <v-toolbar-items>
+        <v-btn text>
           <g-link class="nav__link" to="/">Home</g-link>
+        </v-btn>
+
+        <v-btn text>
           <g-link class="nav__link" to="/about/">About</g-link>
-        </nav>
-      </v-app-bar>
-    </div>
-    <v-container>
-      <slot />
-    </v-container>
+        </v-btn>
+      </v-toolbar-items>
+    </v-app-bar>
+
+    <v-content>
+      <v-container>
+        <slot />
+      </v-container>
+    </v-content>
+
+    <v-footer padless app>
+      <v-col class="text-center" cols="12">
+        {{ new Date().getFullYear() }} — <strong>{{ $static.metadata.siteName }}</strong>
+      </v-col>
+    </v-footer>
   </v-app>
 </template>
 
@@ -26,5 +41,9 @@ query {
 }
 </static-query>
 
-<style>
+<style scoped>
+  .nav__link {
+    text-decoration: none;
+    color: black;
+  }
 </style>
