@@ -7,10 +7,12 @@ import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, appOptions, head, isClient }) {
-  Vue.use(Vuetify)
-  appOptions.vuetify = new Vuetify({
-    iconfont: 'md',
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'
   })
+  Vue.use(Vuetify)
+  appOptions.vuetify = new Vuetify()
 
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
