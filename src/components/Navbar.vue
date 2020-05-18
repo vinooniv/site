@@ -5,8 +5,12 @@
         <v-icon class="material-icons-two-tone">menu</v-icon>
       </v-app-bar-nav-icon>
 
+      <router-link to='/'>
+        <img class="d-md-none" :src="require('../assets/vino-sm.png')" height="35">
+      </router-link>
+
       <v-toolbar-title>
-        <img :src="require('../assets/vino.png')" height="21">
+        <router-link to='/' tag="img" class="hidden-sm-and-down" :src="require('../assets/vino.png')" height="21"></router-link>
       </v-toolbar-title>
 
       <v-spacer />
