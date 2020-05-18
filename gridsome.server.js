@@ -5,9 +5,35 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const Parser = require('rss-parser');
+const DOMParser = require('xmldom').DOMParser;
+
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  let parser = new Parser();
+
+  api.loadSource(async actions => {
+    let data = await parser.parseURL(process.env.BLOG_FEED_URL);
+    const collection = actions.addCollection('Posts');
+
+    for (const [index, item] of data.items.entries()) {
+      let doc = new DOMParser().parseFromString(item['content:encoded']);
+      let img = doc.getElementsByTagName('img')[0];
+      let fisrt_para = doc.getElementsByTagName('p')[0];
+
+      let cover_img_src = img != undefined ? img.getAttribute('src') : undefined
+      let highlights = fisrt_para != undefined ? fisrt_para.textContent : undefined
+
+      collection.addNode({
+        id: index,
+        creator: item.creator,
+        title: item.title,
+        link: item.guid,
+        pubDate: item.pubDate,
+        highlights,
+        categories: item.categories,
+        cover_img_src
+      })
+    }
   })
 
   api.createPages(({ createPage }) => {

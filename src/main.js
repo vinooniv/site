@@ -6,7 +6,7 @@ import 'vuetify/dist/vuetify.min.css'
 
 import DefaultLayout from '~/layouts/Default.vue'
 
-export default function (Vue, { router, appOptions, head, isClient }) {
+export default function (Vue, { appOptions, head }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'

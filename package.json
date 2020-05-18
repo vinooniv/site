@@ -8,6 +8,12 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
-    "vuetify": "^2.2.27"
+    "rss-parser": "^3.8.0",
+    "vuetify": "^2.2.27",
+    "xmldom": "^0.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-plugin-vue": "^6.2.2"
   }
 }
