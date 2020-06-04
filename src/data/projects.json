@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Video background blur",
+    "description": "Blur the background of the video stream with WebRTC and TensorFlowJS without chroma key",
+    "tags": ["WebRTC", "TensorflowJS", "Semantic segmentation"],
+    "links": [
+      {
+        "type": "visibility",
+        "to": "https://vinooniv.github.io/video-bg-blur/",
+        "tooltip": "View live"
+      },
+      {
+        "type": "code",
+        "to": "https://github.com/vinooniv/video-bg-blur/",
+        "tooltip": "View source"
+      }
+    ]
+  }
+]
