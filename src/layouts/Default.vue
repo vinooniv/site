@@ -1,16 +1,14 @@
 <template>
   <v-app>
-    <Navbar/>
+    <Navbar />
 
     <v-content>
       <slot />
     </v-content>
 
-    <v-footer padless app>
-      <v-col class="text-center" cols="12">
-        {{ new Date().getFullYear() }} — <strong>{{ $static.metadata.siteName }}</strong>
-      </v-col>
-    </v-footer>
+    <br>
+
+    <Footer />
   </v-app>
 </template>
 
@@ -23,9 +21,11 @@ query {
 </static-query>
 
 <script>
+import Footer from '~/components/Footer'
 import Navbar from '~/components/Navbar'
 export default {
   components: {
+    Footer,
     Navbar
   }
 }
