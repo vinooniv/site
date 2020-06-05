@@ -6,11 +6,11 @@
       </v-app-bar-nav-icon>
 
       <router-link to='/'>
-        <img class="d-md-none" :src="require('../assets/vino-sm.png')" height="35">
+        <img class="d-md-none" :src="require('../assets/img/vino-sm.png')" height="35">
       </router-link>
 
       <v-toolbar-title>
-        <router-link to='/' tag="img" class="hidden-sm-and-down" :src="require('../assets/vino.png')" height="21"></router-link>
+        <router-link to='/' tag="img" class="logo-img hidden-sm-and-down" :src="require('../assets/img/vino.png')" height="21"></router-link>
       </v-toolbar-title>
 
       <v-spacer />
@@ -23,10 +23,14 @@
     </v-app-bar>
 
     <v-navigation-drawer temporary v-model="drawer" app>
+      <v-list-item>
+        <img :src="require('../assets/img/vino.png')" height="21">
+      </v-list-item>
+      <v-divider></v-divider>
       <v-list dense>
         <v-list-item link text v-for="link in links" :key="link.text" :to="link.to">
           <v-list-item-action>
-            <v-icon class="material-icons-two-tone">{{ link.icon }}</v-icon>
+            <v-icon class="material-icons">{{ link.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title>{{ link.text }}</v-list-item-title>
@@ -59,5 +63,8 @@ export default {
   }
   .nav__item.v-btn--active {
     font-weight: bold;
+  }
+  .logo-img:hover {
+    cursor: pointer;
   }
 </style>
