@@ -10,16 +10,17 @@ import { faGithub, faLinkedin, faMedium } from "@fortawesome/free-brands-svg-ico
 import DefaultLayout from '~/layouts/Default.vue'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
 import Vuetify from 'vuetify'
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons"
 
-config.autoAddCss = false;
-library.add(faGithub, faMedium, faLinkedin);
+config.autoAddCss = false
+library.add(faEnvelopeSquare, faGithub, faMedium, faLinkedin)
 
 export default function (Vue, { appOptions, head }) {
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp'
   })
-  Vue.component("font-awesome", FontAwesomeIcon);
+  Vue.component("font-awesome", FontAwesomeIcon)
   Vue.use(Vuetify)
   appOptions.vuetify = new Vuetify()
 

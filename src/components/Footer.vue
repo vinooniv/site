@@ -3,7 +3,7 @@
     <v-col class="text-center" cols="12">
       <p>
         <v-btn icon large target="_blank" v-for="link in mediaLinks" :key="link.icon" :href="link.to">
-          <font-awesome :icon="['fab', link.icon]" size="2x"/>
+          <font-awesome :icon="[link.type, link.icon]" size="2x"/>
         </v-btn>
       </p>
       <p>© {{ new Date().getFullYear() }} <strong>{{ $static.metadata.siteName }}</strong></p>
@@ -27,9 +27,10 @@ export default {
   data () {
     return {
       mediaLinks: [
-        { icon: 'github', to: 'https://github.com/vinooniv' },
-        { icon: 'medium', to: 'https://medium.com/@vinom' },
-        { icon: 'linkedin', to: 'https://in.linkedin.com/in/vinom' }
+        { type: 'fab', icon: 'github', to: 'https://github.com/vinooniv' },
+        { type: 'fab', icon: 'medium', to: 'https://medium.com/@vinom' },
+        { type: 'fab', icon: 'linkedin', to: 'https://in.linkedin.com/in/vinom' },
+        { type: 'fa', icon: 'envelope-square', to: 'mailto:contact@vinomahendran.com' }
       ]
     }
   }
