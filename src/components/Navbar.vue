@@ -50,7 +50,7 @@ export default {
         { icon: 'home', text: 'HOME', to: '/' },
         { icon: 'description', text: 'BLOGS', to: '/blogs/' },
         { icon: 'code', text: 'PROJECTS', to: '/projects/' },
-        { icon: 'contact_mail', text: 'CONTACT', to: '/contact/' }
+        // { icon: 'contact_mail', text: 'CONTACT', to: '/contact/' }
       ]
     }
   }
