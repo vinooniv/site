@@ -6,11 +6,11 @@
           <h2 class="section-header">Blogs</h2>
         </v-flex>
 
-        <v-flex sm12 lg4 xl3 v-for="edge in $page.posts.edges" :key="edge.node.id">
+        <v-flex sm12 md6 lg4 xl3 v-for="edge in $page.posts.edges" :key="edge.node.id">
           <v-card hover height="100%">
             <v-img :src="edge.node.cover_img_src" height="200"></v-img>
             <v-card-text>
-              <v-icon class="material-icons-two-tone">account_circle</v-icon> {{ edge.node.creator }}
+              <v-icon class="material-icons">account_circle</v-icon> {{ edge.node.creator }}
               <p class="pub-date">{{ new Date(edge.node.pubDate).toDateString() }}</p>
             </v-card-text>
 
@@ -29,7 +29,7 @@
 
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text color="black" small @click="openBlog(edge.node.link)">
+              <v-btn text color="black" small :href="edge.node.link" target="_blank">
                 <b>READ MORE</b>
               </v-btn>
             </v-card-actions>
@@ -62,11 +62,6 @@ query Posts  {
 export default {
   metaInfo: {
     title: 'Blogs'
-  },
-  methods: {
-    openBlog(link) {
-      window.open(link, '_blank')
-    }
   }
 }
 </script>
