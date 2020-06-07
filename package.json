@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@gridsome/plugin-google-analytics": "^0.1.1",
     "gh-pages": "^3.0.0",
     "gridsome": "^0.7.0",
     "rss-parser": "^3.8.0",

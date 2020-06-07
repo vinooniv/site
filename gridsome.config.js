@@ -7,5 +7,12 @@
 module.exports = {
   siteName: 'Vino Mahendran',
   siteUrl: 'https://vinomahendran.com',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-168783664-1',
+      }
+    }
+  ]
 };
