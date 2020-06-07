@@ -16,7 +16,7 @@
       <v-layout grid-list-xl>
         <v-flex lg12>
           <div class="contact">
-            Have questions? <v-btn outlined small href="mailto:contact@vinomahendran.com">CONTACT ME</v-btn>
+            To get in touch, write an <v-btn outlined small href="mailto:contact@vinomahendran.com">EMAIL</v-btn>
           </div>
         </v-flex>
       </v-layout>

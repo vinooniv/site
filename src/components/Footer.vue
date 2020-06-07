@@ -42,7 +42,7 @@ export default {
     line-height: 45%;
   }
   .illustration {
-    font-size: 0.75rem;
+    font-size: 0.63rem;
   }
   .illustration a {
     text-decoration: none;
