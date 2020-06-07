@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'Vino Mahendran',
+  siteUrl: 'https://vinomahendran.com',
   plugins: []
-}
+};
