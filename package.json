@@ -17,7 +17,7 @@
     "gh-pages": "^3.0.0",
     "gridsome": "^0.7.0",
     "rss-parser": "^3.8.0",
-    "vuetify": "^2.2.27",
+    "vuetify": "^2.6.10",
     "xmldom": "^0.5.0"
   },
   "devDependencies": {
